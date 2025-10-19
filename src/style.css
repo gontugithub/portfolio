@@ -1,0 +1,8 @@
+/* Import Tailwind's base styles (normalize + sensible defaults) */
+@tailwind base;
+
+/* Import any prebuilt or custom component classes */
+@tailwind components;
+
+/* Import all Tailwind utility classes (e.g., p-4, bg-blue-500, text-center) */
+@tailwind utilities;
