@@ -1,25 +1,15 @@
-// src/main.js
-import SimpleRouter from './router.js';
+// demo/src/main.js
+import { SimpleRouter } from './router.js';
 import { views } from './views/index.js';
-import './style.css';
 
-// Inicializar router
-const router = new SimpleRouter(views);
+new SimpleRouter(views);
 
-// Opcional: Desplazamiento suave para anclas en la página (enlaces hash) SIN romper el ruteo SPA
-// Nosotros:
-// 1) Usamos delegación de eventos (un solo listener) para capturar clics en etiquetas anchor.
-// 2) Solo manejamos hashes que apuntan a secciones en la página (ej. #app, #footer).
-// 3) Ignoramos explícitamente enlaces del router que comienzan con "#/" para que el ruteo basado en hash continúe funcionando.
+// Desplazamiento suave opcional para anclas en la página que no son enlaces del router
 document.addEventListener('click', (e) => {
 	const link = e.target.closest('a[href^="#"]');
-	if (!link) return; // No es un enlace hash
+	if (!link) return;
 	const href = link.getAttribute('href');
-
-	// Ignorar enlaces del router SPA como "#/about" — dejar que el router maneje la navegación
-	if (href.startsWith('#/')) return;
-
-	// Desplazamiento suave al objetivo en la página (ej. #app)
+	if (href.startsWith('#/')) return; // enlace del router
 	const target = document.querySelector(href);
 	if (target) {
 		e.preventDefault();
