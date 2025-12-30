@@ -1,0 +1,47 @@
+/**
+ * Color Tokens - Dark Mode (Tech-Cyber)
+ * Deep navy tech palette with high-energy accents
+ */
+
+@layer base {
+    .dark {
+        /* ===== SURFACE COLORS ===== */
+        /* Deep void blue - more depth than pure black */
+        --color-background: #030712;
+        --color-foreground: #F9FAFB;
+        --color-card: #171A24;
+        --color-card-foreground: var(--color-foreground);
+        --color-popover: #171A24;
+        --color-popover-foreground: var(--color-foreground);
+
+        /* ===== PRIMARY ===== */
+        /* Electric Blue - High energy action color */
+        --color-primary: #13B3F2;
+        --color-primary-foreground: #030712;
+        --color-primary-rgb: 19, 179, 242;
+
+        /* ===== SECONDARY ===== */
+        /* Deep Plum - Sophisticated accent for tags/status */
+        --color-secondary: #8C4272;
+        --color-secondary-foreground: #F9FAFB;
+
+        /* ===== ACCENT ===== */
+        /* Steel Blue - Used for hover states and subtle highlights */
+        --color-accent: #212E40;
+        --color-accent-foreground: #50D4F2;
+
+        /* ===== MUTED ===== */
+        --color-muted: #171A24;
+        --color-muted-foreground: #8B93A1;
+        --color-muted-foreground-rgb: 139, 147, 161;
+
+        /* ===== UI ELEMENTS ===== */
+        --color-border: #212E40;
+        --color-input: #0F1626;
+        --color-ring: #13B3F2;
+
+        /* ===== DESTRUCTIVE ===== */
+        --color-destructive: #f87171;
+        --color-destructive-foreground: #030712;
+    }
+}

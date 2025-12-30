@@ -1,0 +1,42 @@
+@layer base {
+    :root {
+        /* ===== SURFACE COLORS (Gris Gélido y Blanco) ===== */
+        --color-background: #F0F4F8;         /* Tu Frost Base */
+        --color-foreground: #0F172A;         /* Tu Azul Pizarra (Texto Principal) */
+        
+        --color-card: #FFFFFF;               /* Blanco puro para las cards */
+        --color-card-foreground: #0F172A;
+        
+        --color-popover: #FFFFFF;
+        --color-popover-foreground: #0F172A;
+
+        /* ===== PRIMARY (Azul Oceánico) ===== */
+        /* Adaptado para que destaque sobre el fondo claro */
+        --color-primary: #0284C7;            
+        --color-primary-foreground: #FFFFFF; 
+        --color-primary-rgb: 2, 132, 199;
+
+        /* ===== SECONDARY (Magenta Intenso) ===== */
+        /* Tu versión del ciruela para modo claro */
+        --color-secondary: #BE185D;          
+        --color-secondary-foreground: #FFFFFF;
+
+        /* ===== ACCENT (Resaltes suaves) ===== */
+        --color-accent: #E0F2FE;             /* Azul muy claro para fondos de badges */
+        --color-accent-foreground: #0284C7;  /* Texto azul sobre fondo claro */
+
+        /* ===== MUTED (Textos descriptivos) ===== */
+        --color-muted: #F1F5F9;
+        --color-muted-foreground: #475569;   /* Tu Cool Grey */
+        --color-muted-foreground-rgb: 71, 85, 105;
+
+        /* ===== UI ELEMENTS ===== */
+        --color-border: #D1D5DB;             /* Gris nube para bordes */
+        --color-input: #FFFFFF;
+        --color-ring: #0284C7;
+
+        /* ===== DESTRUCTIVE ===== */
+        --color-destructive: #dc2626;
+        --color-destructive-foreground: #FFFFFF;
+    }
+}
