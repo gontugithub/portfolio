@@ -9,9 +9,6 @@ export const routes = {
     '/contacto': {
         templateId: 'view-contacts',
         templateUrl: `${BASE_URL}src/views/contacts.html`,
-        onMount: (container) => {
-            console.log("¡Vista de contacto cargada correctamente!");
-        }
     },
     404: {
         templateId: 'view-404',
