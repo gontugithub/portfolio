@@ -1,234 +1,71 @@
 <!-- demo/index.html -->
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PORTFOLIO</title>
-    <link rel="stylesheet" href="./src/styles/index.css" />
-    <script type="module" src="./src/main.js"></script>
-  </head>
 
-  <body class="bg-background text-foreground">
-    <a
-      href="https://es.linkedin.com/"
-      class="flex items-center justify-center w-6 h-6 bg-background relative z-10 hover:scale-110 transition-transform"
-    >
-      <img
-        src="src/icons/linkedin.png"
-        alt="LinkedIn"
-        class="w-full h-full object-contain"
-      />
-    </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PORTFOLIO</title>
+  <link rel="stylesheet" href="./src/styles/index.css" />
+  <script type="module" src="./src/main.js"></script>
+</head>
 
-    <!-- BARRA NAVEGACION -->
-   <nav id="navbar" class="fixed top-0 left-0 w-full bg-card text-card-foreground border-b border-border transition-all duration-300 z-[50]">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex justify-between items-center h-20">
-          <div class="flex items-center gap-5">
-            <a href="#/" class="text-2xl font-semibold text-primary"
-              >gontugithub</a
-            >
+<body class="bg-background text-foreground">
+  <a href="https://es.linkedin.com/"
+    class="flex items-center justify-center w-6 h-6 bg-background relative z-10 hover:scale-110 transition-transform">
+    <img src="src/icons/linkedin.png" alt="LinkedIn" class="w-full h-full object-contain" />
+  </a>
 
-            
-          </div>
+  <!-- BARRA NAVEGACION -->
+  <nav id="navbar"
+    class="fixed top-0 left-0 w-full bg-card text-card-foreground border-b border-border transition-all duration-300 z-[50]">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center gap-5">
+          <a href="#/" class="text-2xl font-semibold text-primary">gontugithub</a>
+        </div>
 
-          <!-- Right side: Theme toggle + Menu button -->
-          <div class="flex items-center gap-3">
-            <!-- Theme toggle (always visible) -->
-            <button
-              type="button"
-              id="cambiar_tema"
-              class="p-2 rounded-md hover:bg-muted/50 transition-colors"
-              aria-pressed="false"
-              aria-label="Cambiar tema"
-            ></button>
+        <!-- Right side: Theme toggle + Menu button -->
+        <div class="flex items-center gap-3">
+          <!-- Theme toggle (always visible) -->
+          <button type="button" id="cambiar_tema" class="p-2 rounded-md hover:bg-muted/50 transition-colors"
+            aria-pressed="false" aria-label="Cambiar tema"></button>
 
-            <div id="socials" class="flex items-center gap-2">
-              <a
-                href="https://es.linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="relative z-[100] flex items-center justify-center w-7 h-7 hover:scale-110 transition-transform cursor-pointer"
-              >
-                <img
-                  src="src/icons/linkedin.png"
-                  alt="LinkedIn"
-                  class="w-full h-full object-contain pointer-events-none"
-                />
-              </a>
-              <a
-                href="https://es.linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="relative z-[100] flex items-center justify-center w-7 h-7 hover:scale-110 transition-transform cursor-pointer"
-              >
-                <img
-                  src="src/icons/github.png"
-                  alt="LinkedIn"
-                  class="w-full h-full object-contain pointer-events-none"
-                />
-              </a>
-              <a
-                href="https://es.linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="relative z-[100] flex items-center justify-center w-7 h-7 hover:scale-110 transition-transform cursor-pointer"
-              >
-                <img
-                  src="src/icons/gmail.png"
-                  alt="LinkedIn"
-                  class="w-full h-full object-contain pointer-events-none"
-                />
-              </a>
-            </div>
-
-
-          
+          <div id="socials" class="flex items-center gap-2">
+            <a href="https://es.linkedin.com/" target="_blank" rel="noopener noreferrer"
+              class="relative z-[100] flex items-center justify-center w-7 h-7 hover:scale-110 transition-transform cursor-pointer">
+              <img src="src/icons/linkedin.png" alt="LinkedIn"
+                class="w-full h-full object-contain pointer-events-none" />
+            </a>
+            <a href="https://es.linkedin.com/" target="_blank" rel="noopener noreferrer"
+              class="relative z-[100] flex items-center justify-center w-7 h-7 hover:scale-110 transition-transform cursor-pointer">
+              <img src="src/icons/github.png" alt="LinkedIn" class="w-full h-full object-contain pointer-events-none" />
+            </a>
+            <a href="#/contacts" target="_blank" rel="noopener noreferrer"
+              class="relative z-[100] flex items-center justify-center w-7 h-7 hover:scale-110 transition-transform cursor-pointer">
+              <img src="src/icons/gmail.png" alt="LinkedIn" class="w-full h-full object-contain pointer-events-none" />
+            </a>
           </div>
         </div>
       </div>
+    </div>
+  </nav>
 
-      <!-- Overlay when menu is open (behind menu, clickable to close) -->
-      <div
-        id="menu-overlay"
-        class="fixed inset-0 bg-background/50 backdrop-blur-sm opacity-0 invisible transition-opacity duration-300 pointer-events-none"
-        style="z-index: 9997; top: 4rem"
-      ></div>
+  <!-- Área de contenido principal -->
+  <main id="app" class="min-h-screen pt-5" style="position: relative; z-index: 1" role="main">
+    <!-- Las plantillas de vistas son externas en ./src/views/*.html y son cargadas de forma lazy por el router. -->
 
-      <!-- Slide-out Menu -->
-      <div
-        id="mobile-menu"
-        class="fixed top-16 right-0 w-80 max-w-[85vw] h-[calc(100vh-4rem)] bg-card border-l border-border transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto shadow-2xl"
-        style="z-index: 9998"
-      >
-        <nav class="p-4" role="navigation" aria-label="Menu de navegación">
-          <ul class="space-y-1">
-            <!-- Home with nested sections -->
-            <li>
-              <button
-                id="home-toggle"
-                class="nav-link w-full flex items-center justify-between px-3 py-2.5 text-sm font-medium hover:bg-muted/50 rounded-md transition-colors"
-                aria-expanded="false"
-              >
-                <span>Inicio</span>
-                <svg
-                  class="w-4 h-4 transition-transform duration-200"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
-              <ul id="home-sections-menu" class="hidden pl-4 mt-1 space-y-1">
-                <li>
-                  <a
-                    href="#hero"
-                    class="section-nav-link block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/30 rounded-md transition-colors"
-                  >
-                    Hero
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#features"
-                    class="section-nav-link block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/30 rounded-md transition-colors"
-                  >
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#gallery"
-                    class="section-nav-link block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/30 rounded-md transition-colors"
-                  >
-                    Gallery
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#stats"
-                    class="section-nav-link block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/30 rounded-md transition-colors"
-                  >
-                    Stats
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#testimonials"
-                    class="section-nav-link block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/30 rounded-md transition-colors"
-                  >
-                    Testimonials
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#cta"
-                    class="section-nav-link block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/30 rounded-md transition-colors"
-                  >
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </li>
+  </main>
 
-            <!-- Other pages -->
-            <li>
-              <a
-                href="#/about"
-                class="nav-link block px-3 py-2.5 text-sm font-medium hover:bg-muted/50 rounded-md transition-colors"
-              >
-                Acerca de
-              </a>
-            </li>
-            <li>
-              <a
-                href="#/projects"
-                class="nav-link block px-3 py-2.5 text-sm font-medium hover:bg-muted/50 rounded-md transition-colors"
-              >
-                Proyectos
-              </a>
-            </li>
-            <li>
-              <a
-                href="#/contact"
-                class="nav-link block px-3 py-2.5 text-sm font-medium hover:bg-muted/50 rounded-md transition-colors"
-              >
-                Contacto
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </nav>
+  <!-- Pie de página compartido -->
+  <footer class="fixed bottom-0 left-0 w-full bg-card text-card-foreground py-8 border-t border-border"
+    style="z-index: 9999" role="contentinfo">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-lg">
+        &copy; 2025 Portfolio SPA. Construido con Tailwind y Vanilla JS.
+      </p>
+    </div>
+  </footer>
+</body>
 
-    <!-- Área de contenido principal -->
-    <main
-      id="app"
-      class="min-h-screen pb-24"
-      style="position: relative; z-index: 1"
-      role="main"
-    >
-      <!-- Las plantillas de vistas son externas en ./src/views/*.html y son cargadas de forma lazy por el router. -->
-    </main>
-
-    <!-- Pie de página compartido -->
-    <footer
-      class="fixed bottom-0 left-0 w-full bg-card text-card-foreground py-8 border-t border-border"
-      style="z-index: 9999"
-      role="contentinfo"
-    >
-      <div class="container mx-auto px-4 text-center">
-        <p class="text-lg">
-          &copy; 2025 Portfolio SPA. Construido con Tailwind y Vanilla JS.
-        </p>
-      </div>
-    </footer>
-  </body>
 </html>

@@ -1,0 +1,79 @@
+<template id="view-404">
+    <div class="bg-background text-foreground font-body min-h-screen pt-20 px-6">
+        <div class="max-w-4xl mx-auto py-12">
+            
+            <header class="mb-16 text-center lg:text-left">
+                <h1 class="text-5xl md:text-7xl font-display font-extrabold text-primary mb-6">
+                    Hablemos.
+                </h1>
+                <p class="text-muted-foreground text-lg max-w-xl">
+                    ¿Tienes una idea en mente o simplemente quieres saludar? 
+                    Estoy disponible para proyectos freelance y colaboraciones.
+                </p>
+            </header>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <div class="space-y-10">
+                    <div>
+                        <h3 class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">Email</h3>
+                        <a href="mailto:tuemail@ejemplo.com" class="text-2xl font-medium hover:text-primary transition-colors">
+                            tuemail@ejemplo.com
+                        </a>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">Redes Sociales</h3>
+                        <div class="flex flex-col gap-3">
+                            <a href="#" class="text-xl hover:text-primary transition-all flex items-center gap-2">
+                                <span>LinkedIn</span> <span class="text-xs text-muted-foreground">↗</span>
+                            </a>
+                            <a href="#" class="text-xl hover:text-primary transition-all flex items-center gap-2">
+                                <span>GitHub</span> <span class="text-xs text-muted-foreground">↗</span>
+                            </a>
+                            <a href="#" class="text-xl hover:text-primary transition-all flex items-center gap-2">
+                                <span>Twitter / X</span> <span class="text-xs text-muted-foreground">↗</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-card/50 rounded-3xl border border-border">
+                        <p class="text-sm text-muted-foreground italic">
+                            "Suelo responder en menos de 24 horas. ¡No seas tímido!"
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-card p-8 rounded-4xl border border-border shadow-elevated">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-muted-foreground">Nombre completo</label>
+                            <input type="text" required 
+                                class="w-full bg-input border border-border rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                                placeholder="John Doe">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-muted-foreground">Correo electrónico</label>
+                            <input type="email" required 
+                                class="w-full bg-input border border-border rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                                placeholder="john@example.com">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-muted-foreground">Mensaje</label>
+                            <textarea required rows="5"
+                                class="w-full bg-input border border-border rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
+                                placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                        </div>
+
+                        <button type="submit" 
+                            class="w-full bg-primary text-primary-foreground font-black py-4 rounded-2xl hover:scale-[1.02] active:scale-95 transition-all shadow-lg">
+                            ENVIAR MENSAJE
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
