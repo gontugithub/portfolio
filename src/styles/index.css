@@ -3,6 +3,7 @@
 @import './theme.css';
 
 @import './tokens/typography.css';
-@import './tokens/colors.css';
-@import './tokens/colors-dark.css';
+
+/*@import './tokens/light-mode-colors.css';*/
+@import './tokens/dark-mode-colors.css';
 @import './tokens/spacing.css';
