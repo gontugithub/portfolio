@@ -11,47 +11,70 @@
 </head>
 
 <body class="bg-background text-foreground">
-  <a href="https://es.linkedin.com/"
-    class="flex items-center justify-center w-6 h-6 bg-background relative z-10 hover:scale-110 transition-transform">
-    <img src="src/icons/linkedin.png" alt="LinkedIn" class="w-full h-full object-contain" />
-  </a>
 
   <!-- BARRA NAVEGACION -->
-  <nav id="navbar"
-    class="fixed top-0 left-0 w-full bg-card text-card-foreground border-b border-border transition-all duration-300 z-[50]">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex justify-between items-center h-20">
-        <div class="flex items-center gap-5">
-          <a href="#/" class="text-2xl font-semibold text-primary">gontugithub</a>
+  <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl h-16 
+           rounded-full border border-border/40 bg-card/60 backdrop-blur-md 
+           transition-all duration-300 z-[50] shadow-lg shadow-black/5">
+
+    <div class="h-full px-6">
+      <div class="flex justify-between items-center h-full">
+
+        <div class="flex items-center">
+          <a href="#/"
+            class="text-xl font-display font-black tracking-tighter text-primary hover:scale-105 transition-transform">
+            gontugithub
+          </a>
+        </div>
+        <div id="links">
+          <ul class="flex items-center gap-5 font-display font-black">
+            <li>
+              <a href=""
+                class="text-xl tracking-tighter inline-block transition-transform duration-300 hover:scale-105 hover:text-primary">
+                About me
+              </a>
+            </li>
+            <li>
+              <a href=""
+                class="text-xl tracking-tighter inline-block transition-transform duration-300 hover:scale-105 hover:text-primary">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href=""
+                class="text-xl tracking-tighter inline-block transition-transform duration-300 hover:scale-105 hover:text-primary">
+                Career Path
+              </a>
+            </li>
+            <li>
+              <a href=""
+                class="text-xl tracking-tighter inline-block transition-transform duration-300 hover:scale-105 hover:text-primary">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="socials" class="hidden md:flex items-center gap-5">
+          <a href="https://es.linkedin.com/" target="_blank" rel="noopener noreferrer"
+            class="relative z-[100] flex items-center justify-center w-6 h-6 hover:scale-110 transition-transform cursor-pointer grayscale hover:grayscale-0 opacity-70 hover:opacity-100">
+            <img src="src/icons/linkedin.png" alt="LinkedIn" class="w-full h-full object-contain" />
+          </a>
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+            class="relative z-[100] flex items-center justify-center w-6 h-6 hover:scale-110 transition-transform cursor-pointer grayscale hover:grayscale-0 opacity-70 hover:opacity-100">
+            <img src="src/icons/github.png" alt="GitHub" class="w-full h-full object-contain" />
+          </a>
+          <a href="https://mail.google.com/"
+            class="relative z-[100] flex items-center justify-center w-6 h-6 hover:scale-110 transition-transform cursor-pointer grayscale hover:grayscale-0 opacity-70 hover:opacity-100">
+            <img src="src/icons/gmail.png" alt="Gmail" class="w-full h-full object-contain" />
+          </a>
         </div>
 
-        <!-- Right side: Theme toggle + Menu button -->
-        <div class="flex items-center gap-3">
-          <!-- Theme toggle (always visible) -->
-         
-          <div id="socials" class="flex items-center gap-2">
-            <a href="https://es.linkedin.com/" target="_blank" rel="noopener noreferrer"
-              class="relative z-[100] flex items-center justify-center w-7 h-7 hover:scale-110 transition-transform cursor-pointer">
-              <img src="src/icons/linkedin.png" alt="LinkedIn"
-                class="w-full h-full object-contain pointer-events-none" />
-            </a>
-            <a href="https://es.linkedin.com/" target="_blank" rel="noopener noreferrer"
-              class="relative z-[100] flex items-center justify-center w-7 h-7 hover:scale-110 transition-transform cursor-pointer">
-              <img src="src/icons/github.png" alt="LinkedIn" class="w-full h-full object-contain pointer-events-none" />
-            </a>
-            <a href="#/contacto" target="_blank" rel="noopener noreferrer"
-              class="relative z-[100] flex items-center justify-center w-7 h-7 hover:scale-110 transition-transform cursor-pointer">
-              <img src="src/icons/gmail.png" alt="LinkedIn" class="w-full h-full object-contain pointer-events-none" />
-            </a>
-            
-          </div>
-        </div>
       </div>
     </div>
   </nav>
 
   <!-- Área de contenido principal -->
-  <main id="app" class="min-h-screen pt-5" style="position: relative; z-index: 1" role="main">
+  <main id="app" class="min-h-screen " style="position: relative; z-index: 1" role="main">
     <!-- Las plantillas de vistas son externas en ./src/views/*.html y son cargadas de forma lazy por el router. -->
 
   </main>
