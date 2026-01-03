@@ -5,12 +5,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PORTFOLIO</title>
+  <title>Portfolio</title>
   <link rel="stylesheet" href="./src/styles/index.css" />
   <script type="module" src="./src/main.js"></script>
+  <link rel="shortcut icon" href="src/icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body class="bg-background text-foreground">
+ 
 
   <!-- BARRA NAVEGACION -->
   <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl h-16 
@@ -23,11 +26,11 @@
         <div class="flex items-center">
           <a href="#/"
             class="text-xl font-display font-black tracking-tighter text-primary hover:scale-105 transition-transform">
-            gontugithub
+            NombreDeUsuario
           </a>
         </div>
         <div id="links">
-          <ul class="flex items-center gap-5 font-display font-black">
+          <ul class="hidden sm:flex items-center gap-5 font-display font-black">
             <li>
               <a href=""
                 class="text-xl tracking-tighter inline-block transition-transform duration-300 hover:scale-105 hover:text-primary">
@@ -47,29 +50,45 @@
               </a>
             </li>
             <li>
-              <a href=""
+              <a href="#/contacts/"
                 class="text-xl tracking-tighter inline-block transition-transform duration-300 hover:scale-105 hover:text-primary">
                 Contact
               </a>
             </li>
           </ul>
+          <button id="menu-btn"
+            class="sm:hidden text-2xl hover:scale-110 transition-transform active:scale-90 hover:text-primary">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
-        <div id="socials" class="hidden md:flex items-center gap-5">
+        <div id="socials" class="hidden md:flex items-center gap-5 flex-shrink-0">
           <a href="https://es.linkedin.com/" target="_blank" rel="noopener noreferrer"
-            class="relative z-[100] flex items-center justify-center w-6 h-6 hover:scale-110 transition-transform cursor-pointer grayscale hover:grayscale-0 opacity-70 hover:opacity-100">
-            <img src="src/icons/linkedin.png" alt="LinkedIn" class="w-full h-full object-contain" />
+            class="text-xl hover:scale-110 transition-transform text-muted-foreground hover:text-primary">
+            <i class="fa-brands fa-linkedin"></i>
           </a>
+
           <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
-            class="relative z-[100] flex items-center justify-center w-6 h-6 hover:scale-110 transition-transform cursor-pointer grayscale hover:grayscale-0 opacity-70 hover:opacity-100">
-            <img src="src/icons/github.png" alt="GitHub" class="w-full h-full object-contain" />
+            class="text-xl hover:scale-110 transition-transform text-muted-foreground hover:text-primary">
+            <i class="fa-brands fa-github"></i>
           </a>
-          <a href="https://mail.google.com/"
-            class="relative z-[100] flex items-center justify-center w-6 h-6 hover:scale-110 transition-transform cursor-pointer grayscale hover:grayscale-0 opacity-70 hover:opacity-100">
-            <img src="src/icons/gmail.png" alt="Gmail" class="w-full h-full object-contain" />
+
+          <a href="mailto:tu-correo@gmail.com"
+            class="text-xl hover:scale-110 transition-transform text-muted-foreground hover:text-primary">
+            <i class="fa-solid fa-envelope"></i>
           </a>
         </div>
 
       </div>
+    </div>
+    <div id="mobile-menu" class="absolute top-20 left-0 w-full hidden transition-all duration-300">
+      <ul class="flex flex-col items-center gap-4 p-6 mx-auto w-[90%] 
+             rounded-3xl border border-border/40 bg-card/90 backdrop-blur-xl 
+             shadow-2xl font-display font-black text-foreground">
+        <li><a href="" class="text-xl hover:text-primary transition-colors">About me</a></li>
+        <li><a href="" class="text-xl hover:text-primary transition-colors">Projects</a></li>
+        <li><a href="" class="text-xl hover:text-primary transition-colors">Career Path</a></li>
+        <li><a href="#/contacts/" class="text-xl hover:text-primary transition-colors">Contact</a></li>
+      </ul>
     </div>
   </nav>
 
