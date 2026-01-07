@@ -13,7 +13,6 @@
 </head>
 
 <body class="bg-background text-foreground">
- 
 
   <!-- BARRA NAVEGACION -->
   <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl h-16 
@@ -89,6 +88,18 @@
         <li><a href="" class="text-xl hover:text-primary transition-colors">Career Path</a></li>
         <li><a href="#/contacts/" class="text-xl hover:text-primary transition-colors">Contact</a></li>
       </ul>
+    </div>
+    <div
+      class="fixed top-[4.5rem] left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-[50] pointer-events-none flex justify-end">
+      <div id="theme-nav" class="pointer-events-auto flex items-center justify-center
+               h-10 w-10 rounded-xl border border-border/40 bg-card/60 backdrop-blur-md 
+               transition-all duration-300 shadow-lg shadow-black/5 hover:scale-110 cursor-pointer">
+
+        <button id="theme-toggle"
+          class="w-full h-full text-lg flex items-center justify-center text-primary transition-colors cursor-pointer">
+          <i id="theme-icon" class="fa-solid fa-moon"></i>
+        </button>
+      </div>
     </div>
   </nav>
 

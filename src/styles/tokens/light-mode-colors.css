@@ -1,5 +1,5 @@
 @layer base {
-    :root {
+    .light {
         /* ===== SURFACE COLORS (Gris Gélido y Blanco) ===== */
         --color-background: #F0F4F8;         /* Tu Frost Base */
         --color-foreground: #0F172A;         /* Tu Azul Pizarra (Texto Principal) */
