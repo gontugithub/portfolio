@@ -1,13 +1,17 @@
 import { SimpleRouter } from './router.js';
 import { routes } from './views.js';
-import { initNavbarScroll, initMobileMenu} from './navbar.js';
+import { initScrollView } from './scroll.js'; // Importamos el iniciador de scroll/animaciones
 import { initThemeToggle } from './theme.js';
 
+// 1. Inicializamos el Router
+// El router se encarga de llamar a los métodos onMount de cada vista
 new SimpleRouter(routes);
 
 document.addEventListener('DOMContentLoaded', () => {
-    initNavbarScroll();
-    initMobileMenu();
+    // 2. Inicializamos el tema (esto es global, solo una vez)
     initThemeToggle();
     
+    // 3. Inicializamos el comportamiento base del scroll (Navbar y Theme Toggle)
+    // Se ejecuta al cargar por primera vez
+    initScrollView();
 });
