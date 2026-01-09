@@ -1,7 +1,3 @@
-/* === LICENSE-HEADER START ===
-This file is part of "portafolio-tailwind".
-=== LICENSE-HEADER END === */
-
 export class SimpleRouter {
     constructor(routes) {
         this.routes = routes; 

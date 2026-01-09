@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
+/* BARREL PATTERN:
+  En lugar de importar cada archivo de la carpeta /tokens individualmente,
+  centralizamos las importaciones en './tokens/index.css'. 
+  Esto mantiene el archivo principal limpio y facilita el mantenimiento.
+*/
+
 @import './theme.css';
-
 @import './tokens/typography.css';
-
 @import './tokens/light-mode-colors.css';
 @import './tokens/dark-mode-colors.css';
 @import './tokens/spacing.css';

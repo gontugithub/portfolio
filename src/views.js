@@ -1,12 +1,29 @@
+/*
+ * ARCHIVO CENTRAL DE VISTAS Y ENRUTAMIENTO (views.js)
+ * --------------------------------------------------
+ * Este módulo actúa como el orquestador de la Single Page Application (SPA).
+ * Su función principal es definir la estructura de la aplicación y gestionar
+ * el ciclo de vida de cada vista mediante las siguientes acciones:
+ * 1. MAPEO DE RUTAS: Asocia URLs específicas con sus plantillas HTML externas.
+ * 2. CARGA DINÁMICA: Utiliza 'templateUrl' para inyectar el contenido bajo demanda,gestionando la compatibilidad con entornos locales y GitHub Pages (BASE_URL).
+ * 3. HOOKS DE CICLO DE VIDA:
+ *      - onMount: Se ejecuta cuando la vista entra al DOM. Aquí se utiliza un "Barrel Pattern"
+ *          para importar e inicializar múltiples funciones de scroll, animaciones 3D (Hero),
+ *          scroll horizontal de proyectos y efectos de aparición (Fade Up).
+ *      - onUnmount: Garantiza la limpieza de recursos y ScrollTriggers para evitar 
+ *           conflictos de memoria y errores visuales al navegar entre secciones.
+ * 4. GESTIÓN DE ERRORES: Define una ruta 404 para manejar páginas no encontradas.
+ */
+
 import { 
     initScrollView, 
     cleanupScrollView, 
     initHeroAnimation, 
     initProjectsHorizontalScroll,
-    initFadeUpAnimations // 1. Importamos la función de animaciones
+    initFadeUpAnimations 
 } from './scroll.js';
 
-// Base URL para que funcione en local y en GitHub Pages
+// PARA QUE FUNCIONE EN LOCAL Y EN GITHUB PAGES
 const BASE_URL = import.meta.env.BASE_URL;
 
 export const routes = {
@@ -14,32 +31,18 @@ export const routes = {
         templateId: 'view-landing-page',
         templateUrl: `${BASE_URL}src/views/landing-page.html`,
         onMount: (container) => {
-            // 1. Navegación y Scroll suave
             initScrollView(container);
-            
-            // 2. Animación 3D del Hero (Nombre y Descripción)
             initHeroAnimation();
-
-            // 3. Scroll Horizontal de Repositorios
             initProjectsHorizontalScroll();
-
-            // 4. NUEVO: Lanzar las animaciones de aparición "Fade Up"
-            // Se llama al final para que GSAP detecte los elementos ya renderizados
             initFadeUpAnimations();
         },
         onUnmount: () => {
-            // Limpiamos ScrollTriggers para evitar errores de memoria al navegar
-            cleanupScrollView();
+            cleanupScrollView(); // LIMPIAMOS ANIMACIONES Y SCROLLS
         }
     },
     '/contacto': {
         templateId: 'view-contacts',
         templateUrl: `${BASE_URL}src/views/contacts.html`,
-        onMount: (container) => {
-            console.log('Vista de contacto cargada');
-            // Si también tienes elementos data-fade en contacto, puedes llamarlo aquí:
-            initFadeUpAnimations();
-        }
     },
     404: {
         templateId: 'view-404',

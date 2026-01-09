@@ -1,3 +1,15 @@
+/*
+ * GESTIÓN DE TEMA (Dark/Light Mode)
+ * --------------------------------
+ * Controla la apariencia de la app con persistencia en localStorage 
+ * y animaciones de transición mediante GSAP. Sincroniza las clases 
+ * del body con los tokens de color de Tailwind v4.
+ * 
+ * MÉTODOS PRINCIPALES:
+ * - initThemeToggle(): Inicializa el listener del botón y aplica el tema guardado.
+ * - animateIcon(): Orquestador de micro-interacciones mediante la librería GSAP.
+ */
+
 import gsap from 'gsap';
 
 export function initThemeToggle() {
@@ -5,26 +17,23 @@ export function initThemeToggle() {
     const themeIcon = document.getElementById('theme-icon');
     const body = document.body;
 
-    // 1. Al cargar, aplicamos el tema guardado
-    const savedTheme = localStorage.getItem('theme') || 'dark'; // Dark por defecto
+    // MODO OSCURO POR DEFECTO
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     body.classList.add(savedTheme);
     
-    // Actualizar icono inicial
+    // ACTUALIZACION DE ICONO DEPENDE DEL TEMA
     if (savedTheme === 'light') {
         themeIcon.classList.replace('fa-moon', 'fa-sun');
     }
 
-    // 2. Lógica del click
     themeToggle.addEventListener('click', () => {
         const isDark = body.classList.contains('dark');
 
         if (isDark) {
-            // Pasar a LIGHT
             body.classList.replace('dark', 'light');
             localStorage.setItem('theme', 'light');
             animateIcon(themeIcon, 'fa-sun');
         } else {
-            // Pasar a DARK
             body.classList.replace('light', 'dark');
             localStorage.setItem('theme', 'dark');
             animateIcon(themeIcon, 'fa-moon');
@@ -32,7 +41,7 @@ export function initThemeToggle() {
     });
 }
 
-// Función pequeña para que el icono gire y cambie suavemente
+// ANIMACION DEL ICONO DA VUELTAS
 function animateIcon(icon, newClass) {
     gsap.to(icon, {
         rotate: 360,

@@ -1,4 +1,3 @@
-<!-- demo/index.html -->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -14,7 +13,7 @@
 
 <body class="bg-background text-foreground">
 
-  <!-- BARRA NAVEGACION -->
+  <!-- BARRA DE NAVEGACION -->
   <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl h-16 
            rounded-full border border-border/40 bg-card/60 backdrop-blur-md 
            transition-all duration-300 z-[50] shadow-lg shadow-black/5">
@@ -55,11 +54,13 @@
               </a>
             </li>
           </ul>
+          <!-- BOTON MOBILE FIRST -->
           <button id="menu-btn"
             class="sm:hidden text-2xl hover:scale-110 transition-transform active:scale-90 hover:text-primary">
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
+        <!-- LINKS SOCIALES -->
         <div id="socials" class="hidden md:flex items-center gap-5 flex-shrink-0">
           <a href="https://es.linkedin.com/" target="_blank" rel="noopener noreferrer"
             class="text-xl hover:scale-110 transition-transform text-muted-foreground hover:text-primary">
@@ -79,6 +80,7 @@
 
       </div>
     </div>
+    <!-- MENU MOBILE -->
     <div id="mobile-menu" class="absolute top-20 left-0 w-full hidden transition-all duration-300 z-50">
       <ul class="flex flex-col items-center gap-4 p-6 mx-auto w-[90%] 
          rounded-3xl border border-border/40 bg-card/90 backdrop-blur-xl 
@@ -89,6 +91,7 @@
         <li><a href="#/contacto" class="text-xl hover:text-primary transition-colors">Contacto</a></li>
       </ul>
     </div>
+    <!-- BOTON CAMBIO DE TEMA -->
     <div
       class="fixed top-[4.5rem] left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-[50] pointer-events-none flex justify-end">
       <div id="theme-nav" class="pointer-events-auto flex items-center justify-center
@@ -103,13 +106,13 @@
     </div>
   </nav>
 
-  <!-- Área de contenido principal -->
+  <!-- CONTENIDO PRINCIPAL DONDE SE CARGAN LA VIEWS CON SUS TEMPLATES (router.js) -->
   <main id="app" class="min-h-screen " style="position: relative; z-index: 1" role="main">
-    <!-- Las plantillas de vistas son externas en ./src/views/*.html y son cargadas de forma lazy por el router. -->
+
 
   </main>
 
-  <!-- Pie de página compartido -->
+  <!-- PIE DE PAGINA -->
   <footer class="bg-card text-card-foreground border-t border-border mt-20">
     <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-8">
       <div class="text-center md:text-left">
@@ -140,9 +143,9 @@
         <h4 class="text-sm font-black uppercase tracking-widest text-foreground">Navegación</h4>
         <ul class="space-y-2 text-sm">
           <li><a href="#/" class="text-muted-foreground hover:text-primary transition-colors">Inicio</a></li>
-          <li><a href="#/proyectos" class="text-muted-foreground hover:text-primary transition-colors">Proyectos</a>
+          <li><a href="#/projects" class="text-muted-foreground hover:text-primary transition-colors">Proyectos</a>
           </li>
-          <li><a href="#/sobre-mi" class="text-muted-foreground hover:text-primary transition-colors">Sobre mí</a></li>
+          <li><a href="#/skills" class="text-muted-foreground hover:text-primary transition-colors">Sobre mí</a></li>
         </ul>
       </div>
 

@@ -1,60 +1,80 @@
 <template id="view-contacts">
-    <main class="min-h-screen bg-background text-foreground font-body relative overflow-hidden flex items-center justify-center py-20 px-6">
-        
-        <div class="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[150px] pointer-events-none"></div>
-        <div class="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px] pointer-events-none"></div>
+    <main
+        class="min-h-screen bg-background text-foreground font-body relative overflow-hidden flex items-center justify-center py-20 px-6">
+
+        <div
+            class="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[150px] pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px] pointer-events-none">
+        </div>
 
         <div class="max-w-6xl w-full relative z-10">
             <div class="text-center mb-16">
                 <h1 class="text-5xl md:text-8xl font-display font-black leading-tight mb-4" data-animate="fade-up">
-                    Push to <br>
-                    <span class="bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary italic">Production.</span>
+                    Escribeme<br>
+                    <span class="bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary italic">Y me
+                        pongo en contacto</span>
                 </h1>
                 <p class="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto font-body" data-animate="fade-up">
-                    Lorem ipsum dolor sit amet, ready to scale your next digital product. Iniciemos el proceso de implementación y despliegue.
+                    Lorem ipsum dolor sit amet, ready to scale your next digital product. Iniciemos el proceso de
+                    implementación y despliegue.
                 </p>
             </div>
-
-            <div class="glass border border-border/50 rounded-[3rem] overflow-hidden shadow-2xl bg-card/20 backdrop-blur-xl">
+            <!-- FORMULARIO DE CONTACTO -->
+            <div
+                class="glass border border-border/50 rounded-[3rem] overflow-hidden shadow-2xl bg-card/20 backdrop-blur-xl">
                 <div class="grid lg:grid-cols-2">
-                    
-                    <div class="p-10 md:p-16 space-y-12 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-border/50">
+
+                    <div
+                        class="p-10 md:p-16 space-y-12 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-border/50">
                         <div class="space-y-8">
                             <div>
-                                <span class="inline-block px-3 py-1 text-[10px] font-black tracking-[0.2em] text-primary uppercase bg-primary/10 rounded-full mb-6">
-                                    Protocol: SMTP / Mail
+                                <span
+                                    class="inline-block px-3 py-1 text-[10px] font-black tracking-[0.2em] text-primary uppercase bg-primary/10 rounded-full mb-6">
+                                    gmail
                                 </span>
-                                <a href="mailto:lokesh@dev.io" class="text-3xl md:text-4xl font-display font-bold hover:text-primary transition-colors block break-words tracking-tighter">
-                                    lokesh@dev.io
+                                <a href="mailto:lokesh@dev.io"
+                                    class="text-3xl md:text-4xl font-display font-bold hover:text-primary transition-colors block break-words tracking-tighter">
+                                    gs.alvarez8@gmail.com
                                 </a>
                                 <p class="text-muted-foreground mt-4 flex items-center gap-3 font-medium">
-                                    <span class="grayscale opacity-50">📍</span> Remote / Global (GMT+5:30)
+                                    España (UTC+2)
                                 </p>
                             </div>
 
                             <div class="pt-6 border-t border-border/20">
-                                <span class="inline-block px-3 py-1 text-[10px] font-black tracking-[0.2em] text-secondary uppercase bg-secondary/10 rounded-full mb-6">
-                                    Endpoints: Social
+                                <span
+                                    class="inline-block px-3 py-1 text-[10px] font-black tracking-[0.2em] text-secondary uppercase bg-secondary/10 rounded-full mb-6">
+                                    Redes sociales
                                 </span>
                                 <div class="grid grid-cols-2 gap-4">
-                                    <a href="#" class="flex items-center justify-between p-4 rounded-2xl bg-background/40 border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-all group">
-                                        <span class="font-bold text-sm uppercase tracking-widest group-hover:text-primary">LinkedIn</span>
-                                        <span class="text-muted-foreground/30 group-hover:text-primary group-hover:translate-x-1 transition-all">→</span>
+                                    <a href="#"
+                                        class="flex items-center justify-between p-4 rounded-2xl bg-background/40 border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-all group">
+                                        <span
+                                            class="font-bold text-sm uppercase tracking-widest group-hover:text-primary">LinkedIn</span>
+                                        <span
+                                            class="text-muted-foreground/30 group-hover:text-primary group-hover:translate-x-1 transition-all">→</span>
                                     </a>
-                                    <a href="#" class="flex items-center justify-between p-4 rounded-2xl bg-background/40 border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-all group">
-                                        <span class="font-bold text-sm uppercase tracking-widest group-hover:text-primary">GitHub</span>
-                                        <span class="text-muted-foreground/30 group-hover:text-primary group-hover:translate-x-1 transition-all">→</span>
+                                    <a href="#"
+                                        class="flex items-center justify-between p-4 rounded-2xl bg-background/40 border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-all group">
+                                        <span
+                                            class="font-bold text-sm uppercase tracking-widest group-hover:text-primary">GitHub</span>
+                                        <span
+                                            class="text-muted-foreground/30 group-hover:text-primary group-hover:translate-x-1 transition-all">→</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="flex items-center gap-4 p-5 bg-primary/5 rounded-2xl border border-primary/20 backdrop-blur-sm">
+                        <div
+                            class="flex items-center gap-4 p-5 bg-primary/5 rounded-2xl border border-primary/20 backdrop-blur-sm">
                             <div class="relative flex h-3 w-3">
-                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                                 <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
                             </div>
-                            <p class="text-xs font-black uppercase tracking-widest">Status: Ready for new commits</p>
+                            <p class="text-xs font-black uppercase tracking-widest">Preparado para un nuevo reto</p>
                         </div>
                     </div>
 
@@ -62,20 +82,25 @@
                         <form id="contact-form" class="space-y-6">
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
-                                    <label class="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">Client_Name</label>
-                                    <input type="text" placeholder="Lorem Ipsum" 
+                                    <label
+                                        class="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">NOMBRE</label>
+                                    <input type="text" placeholder="Lorem Ipsum"
                                         class="w-full bg-input/50 border border-border/50 rounded-2xl p-4 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:bg-background transition-all placeholder:text-muted-foreground/30">
                                 </div>
                                 <div class="space-y-2">
-                                    <label class="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">Client_Email</label>
-                                    <input type="email" placeholder="lorem@ipsum.com" 
+                                    <label
+                                        class="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">EMAIL</label>
+                                    <input type="email" placeholder="lorem@ipsum.com"
                                         class="w-full bg-input/50 border border-border/50 rounded-2xl p-4 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:bg-background transition-all placeholder:text-muted-foreground/30">
                                 </div>
                             </div>
-                            
+
                             <div class="space-y-2">
-                                <label class="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">Project_Type</label>
-                                <select class="w-full bg-input/50 border border-border/50 rounded-2xl p-4 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:bg-background transition-all appearance-none cursor-pointer">
+                                <label
+                                    class="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">TIPO
+                                    DE PROYECTO</label>
+                                <select
+                                    class="w-full bg-input/50 border border-border/50 rounded-2xl p-4 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:bg-background transition-all appearance-none cursor-pointer">
                                     <option>Full-Stack Implementation</option>
                                     <option>Cloud Infrastructure (AWS)</option>
                                     <option>Data Engineering / AI</option>
@@ -84,14 +109,16 @@
                             </div>
 
                             <div class="space-y-2">
-                                <label class="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">Message_Payload</label>
-                                <textarea rows="4" placeholder="Describe el stack técnico y los objetivos del proyecto..." 
+                                <label
+                                    class="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">MENSAJE</label>
+                                <textarea rows="4"
+                                    placeholder="Describe el stack técnico y los objetivos del proyecto..."
                                     class="w-full bg-input/50 border border-border/50 rounded-2xl p-4 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:bg-background transition-all resize-none placeholder:text-muted-foreground/30"></textarea>
                             </div>
 
-                            <button type="submit" 
+                            <button type="submit"
                                 class="w-full bg-primary text-primary-foreground font-black py-5 rounded-2xl hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-3 group uppercase tracking-widest text-sm">
-                                Execute Request
+                                CONTACTAR
                                 <span class="group-hover:translate-x-1 transition-transform">🚀</span>
                             </button>
                         </form>
